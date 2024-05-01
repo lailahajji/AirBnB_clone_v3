@@ -1,3 +1,5 @@
+#!/usr/bin/python3 
+'''
 ESTful API actions for user object
 '''
 from flask import jsonify, make_response, abort, request
@@ -82,4 +84,3 @@ def put_user(user_id=None):
             setattr(obj_user, key, value)
     obj_user.save()
     return (jsonify(obj_user.to_dict()), 200)
-

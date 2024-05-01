@@ -1,3 +1,5 @@
+#!/usr/bin/python3 
+'''
 ESTful API actions for user object
 '''
 from flask import jsonify, make_response, abort, request, Blueprint
@@ -81,4 +83,3 @@ def put_review(review_id):
             setattr(obj_user, key, value)
     obj_review.save()
     return (jsonify(obj_review.to_dict()), 200)
-

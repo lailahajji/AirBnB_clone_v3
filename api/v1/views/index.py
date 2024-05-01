@@ -1,4 +1,5 @@
- json statuses for app_views routes  """
+#!/usr/bin/python3 
+"""json statuses for app_views routes  """
 from api.v1.views import app_views
 from flask import jsonify
 from models import storage
@@ -26,4 +27,3 @@ def stat_count():
 
 if __name__ == "__main__":
     pass
-

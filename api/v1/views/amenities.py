@@ -1,3 +1,5 @@
+#!/usr/bin/python3 
+'''
 ESTful API actions for Amenity objects
 '''
 from flask import jsonify, abort, request
@@ -76,4 +78,3 @@ def put_amenity(amenity_id):
             setattr(amenity, key, value)
     amenity.save()
     return jsonify(amenity.to_dict())
-

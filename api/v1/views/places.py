@@ -1,3 +1,5 @@
+#!/usr/bin/python3 
+'''
 ESTful API actions for Place objects
 '''
 from flask import jsonify, abort, request
@@ -93,4 +95,3 @@ def put_place(place_id):
             setattr(place, key, value)
     place.save()
     return jsonify(place.to_dict()), 200
-

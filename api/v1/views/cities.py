@@ -1,3 +1,5 @@
+#!/usr/bin/python3 
+'''
 ESTful API actions for City object
 '''
 from flask import jsonify, abort, request
@@ -88,4 +90,3 @@ def put_city(city_id):
             setattr(city, key, value)
     city.save()
     return jsonify(city.to_dict())
-
